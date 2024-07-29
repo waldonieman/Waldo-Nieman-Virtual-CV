@@ -16,7 +16,7 @@ h3{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: clamp(14px, 1.5vw, 18px); /* Adjust the base font */
+  font-size: clamp(15px, 1.5vw, 18px); /* Adjust the base font */
 }
 
 /* For heading elements, adjust the clamp values accordingly to ensure they scale up more*/
@@ -39,8 +39,8 @@ header {
   }
 
 body {
-  background-color: #f0f0f0;
-  color: #556B2F;
+  background-color: #556B2F;
+  color: #fff;
 }
 
 
@@ -64,7 +64,7 @@ nav a {
 
 .section h2,
 #intro {
-  color: #556B2F;
+  color: #000000;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -74,7 +74,7 @@ nav a {
 }
 
 .section-content {
-  background-color: #000000;
+  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
