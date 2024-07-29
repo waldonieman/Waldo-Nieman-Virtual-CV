@@ -1,6 +1,7 @@
+/* Waldo Nieman,37943278 */
 /* styles.css */
 
-/* Reset some default styles */
+/* Reset a few default styles */
 body,
 p,
 ul,
@@ -15,10 +16,10 @@ h3{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: clamp(14px, 1.5vw, 18px); /* Adjust the base font size */
+  font-size: clamp(14px, 1.5vw, 18px); /* Adjust the base font */
 }
 
-/* For heading elements, adjust the clamp values accordingly to ensure they scale up more significantly */
+/* For heading elements, adjust the clamp values accordingly to ensure they scale up more*/
 h1 {
   font-size: clamp(24px, 5vw, 32px);
 }
@@ -96,7 +97,7 @@ nav a {
   display: none;
 }
 
-/* Responsive and Interaction Styles */
+/* Interaction Styles & Responsive Styles */
 @media (max-width: 768px) {
   header {
     padding: 10px 0;
