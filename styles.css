@@ -54,7 +54,7 @@ nav li {
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -116,7 +116,7 @@ nav a {
     display: block;
     background: none;
     border: none;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
   }
 
@@ -142,7 +142,7 @@ nav a {
   }
 
   .mobile-nav.active ul li a {
-    color: #fff;
+    color: #000000;
     font-weight: bold;
   }
 }
