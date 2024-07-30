@@ -21,7 +21,7 @@ h3{
 
 /* For heading elements, adjust the clamp values accordingly to ensure they scale up more*/
 h1 {
-  font-size: clamp(50px, 5vw, 34px);
+  font-size: clamp(24px, 5vw, 34px);
 }
 h2 {
   font-size: clamp(22px, 4vw, 30px);
@@ -35,7 +35,7 @@ header {
     background-color: #556B2F;
     color: #fff;
     text-align: center;
-    padding: 69px 0;
+    padding: 40px 0;
   }
 
 body {
@@ -70,7 +70,7 @@ nav a {
 }
 
 .img-cv {
-width: 200px;
+width: 135px;
 position: absolute;
 top: 0;
 left: 0;
