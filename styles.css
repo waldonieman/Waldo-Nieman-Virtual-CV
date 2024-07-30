@@ -70,7 +70,10 @@ nav a {
 }
 
 .img-cv {
-width: 300px;
+width: 200px;
+position: absolute;
+top: 0;
+left: 0;
 }
 
 #hr1 {
