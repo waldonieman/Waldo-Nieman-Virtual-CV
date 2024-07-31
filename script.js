@@ -1,15 +1,24 @@
 //Waldo Nieman, 37943278
 // script.js
+// Here I added extra functionalities such as the progress bar etc.
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
-  const navLinks = document.querySelectorAll(".nav-link");
-  const backToTopButton = document.createElement("button");
-  backToTopButton.textContent = "Top";
-  backToTopButton.id = "back-to-top";
-  document.body.appendChild(backToTopButton);
 
-  // Function to add a class for fade-in animation
+//Add in a funtion bar to have an extra functionality on the website
+  // Create and style the progress bar
+  const progressBar = document.createElement("div");
+  progressBar.id = "progress-bar";
+  document.body.appendChild(progressBar);
+  progressBar.style.position = "fixed";
+  progressBar.style.top = 0;
+  progressBar.style.left = 0;
+  progressBar.style.height = "5px";
+  progressBar.style.backgroundColor = "#4caf50";
+  progressBar.style.width = "0%";
+  progressBar.style.zIndex = 1000;
+
+  // Add a new class for fade-in animation
   function addAnimationClass() {
       sections.forEach((section) => {
           const sectionTop = section.getBoundingClientRect().top;
@@ -26,58 +35,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Function to highlight the current section in the navigation
-  function highlightCurrentSection() {
-      let index = sections.length;
-
-      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-      navLinks.forEach((link) => link.classList.remove("active"));
-      navLinks[index].classList.add("active");
-  }
-
-  // Function to handle smooth scrolling
-  function smoothScroll(event) {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth"
-      });
-  }
-
-  // Function to show/hide the back-to-top button
-  function toggleBackToTopButton() {
-      if (window.scrollY > 300) {
-          backToTopButton.classList.add("visible");
-      } else {
-          backToTopButton.classList.remove("visible");
-      }
+  // Function to update the progress bar for extra funtionality
+  function updateProgressBar() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + "%";
   }
 
   // Initial check for sections in the viewport
   addAnimationClass();
-  highlightCurrentSection();
-  toggleBackToTopButton();
+  updateProgressBar();
 
-  // Event listeners
+  // Check for sections in the viewport on scroll, as well as when the page is fully loaded
   window.addEventListener("scroll", () => {
       addAnimationClass();
-      highlightCurrentSection();
-      toggleBackToTopButton();
+      updateProgressBar();
   });
   window.addEventListener("load", addAnimationClass);
-
-  navLinks.forEach((link) => link.addEventListener("click", smoothScroll));
-
-  backToTopButton.addEventListener("click", () => {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-      });
-  });
 
   // Mobile navigation toggle
   const mobileNavToggle = document.getElementById("mobile-nav-toggle");
@@ -88,6 +63,3 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
-
-
-  

@@ -1,5 +1,6 @@
 /* Waldo Nieman, 37943278 */
 /* styles.css */
+/* Here I changed all the styles of my website components */
 
 /* Reset a few default styles */
 body,
@@ -19,17 +20,18 @@ h3 {
 }
 
 /* For heading elements, adjust the clamp values accordingly to ensure they scale up more */
+/* Change font size here */
 h1 {
-  font-size: clamp(37px, 5vw, 34px);
+  font-size: clamp(45px, 6vw, 38px);
 }
 h2 {
-  font-size: clamp(22px, 4vw, 30px);
+  font-size: clamp(28px, 5vw, 30px);
 }
 h3 {
   font-size: clamp(18px, 3.5vw, 24px);
 }
 
-/* Global styles */
+/* Global styles of header body etc with colours and align funtions*/
 header {
   display: flex;
   align-items: center;
@@ -38,6 +40,7 @@ header {
   padding: 20px;
 }
 
+/*Change image size and style*/
 .img-cv {
   width: clamp(150px, 17vw, 250px);
   height: auto;
@@ -116,8 +119,9 @@ body {
   display: none;
 }
 
-/* Interaction Styles & Responsive Styles */
+/* Interaction Styles & Responsive Styles when screen size is smaller */
 @media (max-width: 768px) {
+  /*When Viewing website on mobile device no picture is shown becuase of screen size being smaller*/
   .img-cv {
     display: none;
   }
